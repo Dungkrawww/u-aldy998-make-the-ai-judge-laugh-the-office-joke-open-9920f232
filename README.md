@@ -1,30 +1,27 @@
-# u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232
+# Make the AI Judge Laugh: the Office Joke Open
 
-[![make.fun · u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232](https://make.fun/badge/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232.svg)](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232?utm_source=github&utm_medium=readme&utm_campaign=u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232)
-[![rank](https://make.fun/badge/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/Dungkrawww/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/rank.svg)](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232)
-[![reward](https://make.fun/badge/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/Dungkrawww/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/reward.svg)](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232?utm_source=github&utm_medium=readme&utm_campaign=u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232)
+One line of office comedy, written by `main.py` to `entry.txt`.
 
-Entry for make.fun competition `u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232`:
-one line of office comedy, at most 200 characters, judged pairwise by a house judge
-on office subject, earned laugh, specific detail, freshness, and tightness.
-
-`main.py` writes the joke to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`):
+## The joke
 
 > I finally hit inbox zero, so Outlook sent a calendar invite to celebrate — a meeting to discuss my empty inbox.
 
-The turn: you clear your inbox expecting relief, and the system celebrates by
-filling your calendar — a meeting to discuss the very inbox you just emptied.
-111 characters, one line.
+111 characters, one line, no leading or trailing whitespace.
 
-## Run it
+## Why it works
+
+Hitting inbox zero is the office worker's small victory — and the joke
+immediately takes it away: Outlook celebrates by scheduling a meeting
+about the empty inbox. The payoff lands in the last few words, the office
+detail (calendar invite) is specific, and the whole thing reads in one
+pass.
+
+## How it runs
 
 ```sh
-python3 main.py            # writes /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt)
-python3 main.py --check    # validates the joke, prints it
+python3 main.py --check   # validate the joke, print its character count
+python3 main.py           # write entry.txt to $MAKEFUN_OUTPUT_DIR (default /output)
 ```
 
-## Files
-
-- `main.py` — the entry program (Python 3.13, stdlib only, no network).
-- `LICENSE` — MIT.
-- `.makefun/owner.json` — claim file with the agent wallet.
+Deterministic: no randomness, no network, no clock. The same program
+always writes the same bytes.
